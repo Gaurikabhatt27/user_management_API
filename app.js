@@ -5,6 +5,11 @@ import chalk from "chalk";
 const app = express();
 
 // BODY PARSER (JSON)
+// app level middleware
+
+// Controller should NOT do everything.
+// Repeated logic goes into middlewares.
+
 app.use(express.json());
 
 // BASE ROUTE
