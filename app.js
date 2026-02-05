@@ -1,5 +1,6 @@
 import express from "express";
 import userRouter from "./routes/user.routes.js";
+import chalk from "chalk";
 
 const app = express();
 
@@ -10,6 +11,9 @@ app.use(express.json());
 app.get("/", (req, res) => {
     res.send("User Management API is running");
 });
+
+console.log(chalk.green("Success message"));
+console.log(chalk.blue("Latest Information message"));
 
 // USER ROUTES
 app.use("/api/users", userRouter);
